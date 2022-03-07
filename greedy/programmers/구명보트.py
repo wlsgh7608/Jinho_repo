@@ -21,14 +21,7 @@ def wrong_solution(people, limit):
         cnt+=1
     return cnt
 
-""""
-15686	 치킨 배달		13076	46663	44.408%
-14500	 테트로미노		12600	51788	35.487%
-14503	 로봇 청소기		12577	35096	53.428%
-3190	 뱀	다국어	11806	44094	38.823% - 
-다 같이 풀고, 모였을 때는 완전 탐색 
 
-"""
 def solution(people, limit):
     
     people.sort(reverse=True) # 내림차순
