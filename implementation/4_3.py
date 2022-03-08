@@ -8,38 +8,43 @@
 시간복잡도 : O(1)
 
 """
-n,m = map(int,input().split())
-
+N,M = map(int,input().split())
 x,y,d = map(int,input().split())
-dic = {0:(-1,0),1:(0,1),2:(1,0),3:(0,-1)}
-maps = []
-for _ in range(n):
-    maps.append(list(map(int,input().split())))  # 맵 추가
-print(maps)
-visited = [[False for _ in range(m)] for _ in range(n)] # n*m 방문리스트
-visited[x][y] = True
+
+G = []
+for _ in range(N):
+    G.append(list(map(int,input().split())))
+
+visited = [[0 for _ in range(M)] for _ in range(N)]
+D = {0:[-1,0],1:[0,1],2:[1,0],3:[0,-1]}
 cnt = 0
+fault = 0
 while True:
-    ini_d = d # 현재 방향
-    for i in range(d-1,d-5,-1): # 4방향으로 체크
+    visited[x][y] = True
+    ini_d = d
+    for i in range(d-1,d-5,-1):
         cur_d = i%4
-        nx,ny = x + dic[cur_d][0], y + dic[cur_d][1]
-        if nx and ny and nx < n and ny < m and (not maps[nx][ny]) and (not visited[nx][ny]): # 갈 수 있을 시
-            x,y = nx,ny
-            visited[x][y] = True
-            d = cur_d
-            cnt+=1
+        nx = x + D[cur_d][0]
+        ny = y + D[cur_d][1]
+        if not visited[nx][ny] and not G[nx][ny] :
+            x = nx
+            y = ny
+            d = cur_d 
             break
-    else: # 4방향을 모두 돌았을 때
-        back = (ini_d-2)%4
-        nx,ny = x+dic[back][0], y+ dic[back][1]
-        if nx<n and ny<n and maps[nx][ny] : # 바다거나 끝일 경우
+    else :
+        tmp = (ini_d+2)%4
+        nx = x+ D[tmp][0]
+        ny = y + D[tmp][1]
+
+        if G[nx][ny]:
             break
-        else: # 뒤로 back
-            x,y = nx,ny
-            cnt+=1
-        
-print(cnt)
+        else:
+            x = nx
+            y = ny
+ans  = 0
+for raw in visited:
+    ans +=sum(raw)
+print(ans)
 """
 input
 4 4
