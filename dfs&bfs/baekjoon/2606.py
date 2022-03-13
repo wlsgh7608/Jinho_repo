@@ -1,5 +1,8 @@
 """
 https://www.acmicpc.net/problem/2606
+1번 컴퓨터부터 바이러스 시작
+해당 컴퓨터와 인접한 컴퓨터에 대하여 방문하지 않았으면 cnt+1, 방문 표시
+bfs을 이용하여 풀이
 """
 import sys
 from collections import deque
