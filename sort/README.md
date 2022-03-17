@@ -29,7 +29,7 @@ print(arr)
 데이터를 하나씩 확인하여, 각 데이터를 적절한 위치에 삽입하는 정렬
 필요할 때만 위치를 바꾸므로 '데이터가 거의 정렬된 형태'일 때 효율적
 
-<img width ='500' src="https://user-images.githubusercontent.com/62232531/158822556-1b5a8300-2663-447f-b17b-bc70fca6eb73.gif>
+<img width ='500' src="https://user-images.githubusercontent.com/62232531/158822556-1b5a8300-2663-447f-b17b-bc70fca6eb73.gif">
 
 ``` python
 arr = [7,5,9,0,3,1,6,2,4,8]
