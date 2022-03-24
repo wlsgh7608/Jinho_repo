@@ -13,7 +13,7 @@ def rotate(number,direct):
         wheels[number].append(wheels[number].popleft())
 
 
-def check(w,d): # v=0 : 왼쪽, v=1 : 오른쪽, v = 2 : 양쪽
+def check(w,d): 
     is_rotate = [False for _ in range(4)]
     is_rotate[w] = True
     for i in range(w-1,-1,-1):
@@ -54,12 +54,3 @@ for i in range(4):
 
 
 print(result)
-
-
-
-
-
-
-
-
-
