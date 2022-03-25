@@ -22,7 +22,7 @@ for i in numbers:
     print(i)
 ```
 
-# [2751번 - 수 정렬하기 3](https://www.acmicpc.net/problem/10989)
+# [10989번 - 수 정렬하기 3](https://www.acmicpc.net/problem/10989)
 
 - 수 정렬하기 3 / 실버 5 / 9분
 - n의 값이 작은 범위 (1~10000)이므로 count sort 이용 
@@ -92,6 +92,7 @@ ex ) list = [1,2,3]
  - case 2,3
    - 어떠한 조건절도 만족하지 않음
 ** 결과 : 최빈값 1, 정답 : 최빈값 2 **
+
 따라서 두번째 인덱스(idx = 1 )부터 루프를 돌아야 함
 
 ## 정답 코드
@@ -132,7 +133,7 @@ print(n_list[-1]- n_list[0])
 ```
 
 
-# [11650번 - 수 정렬하기 3](https://www.acmicpc.net/problem/11650)
+# [11650번 - 좌표 정렬하기](https://www.acmicpc.net/problem/11650)
 - 좌표 정렬하기 / 실버 5 / 6분
 - 내부 라이브러리 이용하여 정렬
 - 람다를 이용해 이중 sort 간편하게 작성
