@@ -8,6 +8,8 @@ n = int(input())
 n_list = list(map(int,input().split()))
 
 max_lists = []
+
+# lower bound 
 def idx_check(arr,target):
     lo ,hi = 0, len(arr)-1
     while lo <=hi:
@@ -27,7 +29,7 @@ for number in n_list:
 
 print(len(max_lists))
 
-""""
+"""
 input 
 1
 10 5
