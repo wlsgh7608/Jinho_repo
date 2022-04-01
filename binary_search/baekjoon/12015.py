@@ -10,9 +10,10 @@ n_list = list(map(int,input().split()))
 max_lists = []
 
 # lower bound 
+# target값 보다 같거나 큰 가장 작은 인덱스
 def idx_check(arr,target):
     lo ,hi = 0, len(arr)-1
-    while lo <=hi:
+    while lo <= hi:
         m = (lo+hi)//2
         if arr[m] >= target:
             hi = m-1
@@ -33,4 +34,24 @@ print(len(max_lists))
 input 
 1
 10 5
+
+
+10 20 10 30 20 50
+
+1. 10인경우
+리스트가 비어있으니 
+2. 20 인 경우
+리스트에 추가
+3. 10 인 경우
+리스트[0] = 10
+4. 30
+리스트에 추가
+5. 20 인 경우 
+리스트[1]= 20
+6. 50인 경우
+리스트에 추가
+
+리스트 = [10,20,30,50]
+
+
 """
