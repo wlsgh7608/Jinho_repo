@@ -1,5 +1,6 @@
 """
 https://www.acmicpc.net/problem/16236
+아기상어 / 골드 3 / 180분
 실패 2(시간 초과 2)
 
 길찾기 - bfs
@@ -42,7 +43,6 @@ while Q:
             if not visited[nx][ny] and G[nx][ny]<=fish_size:
                 visited[nx][ny] = True
                 if 0<G[nx][ny]<fish_size:
-                    feed_dist +=1
                     feed_yet = False
                     feed_list.append((nx,ny,t+1))
                 if feed_yet:
