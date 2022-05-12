@@ -1,6 +1,6 @@
 """
 https://www.acmicpc.net/problem/5582
-
+공통 부분 문자열 / 골드 5
 """
 A = input()
 B = input()
